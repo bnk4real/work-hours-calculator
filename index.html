@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./image/money.png">
+    <title>Work Hours Calculator</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+
+    <div class="w3-container w3-card w3-margin">
+        <h2>Work Hours Calculator</h2>
+
+        <form id="workHoursForm">
+            <label for="hours" class="w3-margin-top">Enter Hours of Work:</label>
+            <input class="w3-input w3-border" type="number" id="hours" placeholder="Enter hours" required>
+            <label for="hours" class="w3-margin-top">Enter Rates before Tax:</label>
+            <input class="w3-input w3-border" type="number" id="rates" placeholder="Enter rates" required>
+            <button type="button" class="w3-button w3-hover-indigo w3-blue"
+                style="margin-top: 20px; margin-bottom: 20px;" onclick="calculateEarnings()">Calculate
+                Earnings
+            </button>
+            <button type="button" class="w3-button w3-hover-yellow w3-amber"
+                style="margin-top: 20px; margin-bottom: 20px;" onclick="refreshPage()">
+                Refresh
+            </button>
+        </form>
+
+        <ul id="hoursList" class="w3-ul" style="margin-top: 20px; margin-bottom: 20px;"></ul>
+
+        <hr>
+
+        <div class="w3-container" style="margin-top: 20px; margin-bottom: 20px;">
+            <div>
+                <strong>Total Hours:</strong> <span id="totalHours">0</span>
+            </div>
+
+            <div>
+                <strong>Total Earnings:</strong> $<span id="totalEarnings">0.00</span>
+            </div>
+
+            <div>
+                <strong>Earnings per Hour:</strong> $<span id="earningsPerHour">0.00</span>
+            </div>
+        </div>
+
+        <hr>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
